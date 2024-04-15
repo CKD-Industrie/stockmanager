@@ -109,13 +109,14 @@ class modStockManager extends DolibarrModules {
 				//   '/mymodule/js/mymodule.js.php',
 			),
 			// Set here all hooks context managed by module. To find available hook context, make a "grep -r '>initHooks(' *" on source code. You can also set hook context to 'all'
-			'hooks' => array(
-				//   'data' => array(
-				//       'hookcontext1',
-				//       'hookcontext2',
-				//   ),
-				//   'entity' => '0',
-			),
+			// 'hooks' => array(
+			// 	//   'data' => array(
+			// 	//       'hookcontext1',
+			// 	//       'hookcontext2',
+			// 	//   ),
+			// 	//   'entity' => '0',
+			// ),
+			'hooks' => array('stockproductcard'),
 			// Set this to 1 if features of module are opened to external users
 			'moduleforexternal' => 0,
 			// Set this to 1 if the module provides a website template into doctemplates/websites/website_template-mytemplate
@@ -289,43 +290,19 @@ class modStockManager extends DolibarrModules {
 		$this->rights[$r][0] = $this->numero . sprintf('%02d', ($o * 10) + 1); // Permission id (must not be already used)
 		$this->rights[$r][1] = $langs->trans('Rights01'); // Permission label
 		$this->rights[$r][3] = 1;
-		$this->rights[$r][4] = 'read';
-		$this->rights[$r][5] = ''; // In php code, permission will be checked by test if ($user->hasRight('mymodule', 'myobject', 'read'))
+		$this->rights[$r][4] = 'read'; // In php code, permission will be checked by test if ($user->hasRight('stockmanager', 'read'))
 
 		$r++;
 		$this->rights[$r][0] = $this->numero . sprintf('%02d', ($o * 10) + 2); // Permission id (must not be already used)
 		$this->rights[$r][1] = $langs->trans('Rights02'); // Permission label
 		$this->rights[$r][3] = 1;
-		$this->rights[$r][4] = 'write';
-		$this->rights[$r][5] = ''; // In php code, permission will be checked by test if ($user->hasRight('mymodule', 'myobject', 'write'))
+		$this->rights[$r][4] = 'write'; // In php code, permission will be checked by test if ($user->hasRight('stockmanager', 'write'))
 		
 		$r++;
 		$this->rights[$r][0] = $this->numero . sprintf('%02d', ($o * 10) + 3); // Permission id (must not be already used)
 		$this->rights[$r][1] = $langs->trans('Rights03'); // Permission label
 		$this->rights[$r][3] = 0;
-		$this->rights[$r][4] = 'delete';
-		$this->rights[$r][5] = ''; // In php code, permission will be checked by test if ($user->hasRight('mymodule', 'myobject', 'delete'))
-		
-		$r++;
-		$this->rights[$r][0] = $this->numero . sprintf('%02d', ($o * 10) + 4); // Permission id (must not be already used)
-		$this->rights[$r][1] = $langs->trans('Rights04'); // Permission label
-		$this->rights[$r][3] = 0;
-		$this->rights[$r][4] = 'movement';
-		$this->rights[$r][5] = 'read'; // In php code, permission will be checked by test if ($user->hasRight('mymodule', 'myobject', 'delete'))
-		
-		$r++;
-		$this->rights[$r][0] = $this->numero . sprintf('%02d', ($o * 10) + 5); // Permission id (must not be already used)
-		$this->rights[$r][1] = $langs->trans('Rights05'); // Permission label
-		$this->rights[$r][3] = 0;
-		$this->rights[$r][4] = 'movement';
-		$this->rights[$r][5] = 'write'; // In php code, permission will be checked by test if ($user->hasRight('mymodule', 'myobject', 'delete'))
-		
-		$r++;
-		$this->rights[$r][0] = $this->numero . sprintf('%02d', ($o * 10) + 6); // Permission id (must not be already used)
-		$this->rights[$r][1] = $langs->trans('Rights06'); // Permission label
-		$this->rights[$r][3] = 0;
-		$this->rights[$r][4] = 'movement';
-		$this->rights[$r][5] = 'delete'; // In php code, permission will be checked by test if ($user->hasRight('mymodule', 'myobject', 'delete'))
+		$this->rights[$r][4] = 'delete'; // In php code, permission will be checked by test if ($user->hasRight('stockmanager', 'delete'))
 		/* END PERMISSIONS */
 
 

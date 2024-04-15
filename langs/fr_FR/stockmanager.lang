@@ -41,12 +41,9 @@ NoParam = Aucun paramètres pour le moment
 
 
 # Rights
-Rights01 = Lire les 'objets' de StockManager
-Rights02 = Créer/modifier les 'objets' de StockManager
-Rights03 = Supprimer les 'objets' de StockManager
-Rights04 = Lire les mouvement de StockManager
-Rights05 = Créer/modifier les mouvement de StockManager
-Rights06 = Supprimer les mouvement de StockManager
+Rights01 = Lire les mouvements de StockManager
+Rights02 = Créer/modifier les mouvements de StockManager
+Rights03 = Supprimer les mouvements de StockManager
 
 
 # Tabs
