@@ -39,8 +39,8 @@ function stockmanagerAdminPrepareHead() {
 	$head = array();
 
 	$head[$h][0] = dol_buildpath('/stockmanager/admin/setup.php', 1);
-	$head[$h][1] = $langs->trans('SettingsTab');
-	$head[$h][2] = 'settings';
+	$head[$h][1] = $langs->trans('SetupTab');
+	$head[$h][2] = 'setup';
 	$h++;
 
 	/*
