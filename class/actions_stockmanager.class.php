@@ -91,32 +91,32 @@ class ActionsStockManager extends CommonHookActions
 	}
 
 
-    /**
-	 * Overloading the addMoreActionsButtons function : replacing the parent's function with the one below
-	 *
-	 * @param   array           $parameters     Hook metadatas (context, etc...)
-	 * @param   CommonObject    $object         The object to process (an invoice if you are in invoice module, a propale in propale's module, etc...)
-	 * @param   string          $action         Current action (if set). Generally create or edit or null
-	 * @param   HookManager     $hookmanager    Hook manager propagated to allow calling another hook
-	 * @return  int                             Return integer < 0 on error, 0 on success, 1 to replace standard code
-	 */
-    public function addMoreActionsButtons($parameters, &$object, &$action, $hookmanager) {
-        // global $user;
+    // /**
+	//  * Overloading the addMoreActionsButtons function : replacing the parent's function with the one below
+	//  *
+	//  * @param   array           $parameters     Hook metadatas (context, etc...)
+	//  * @param   CommonObject    $object         The object to process (an invoice if you are in invoice module, a propale in propale's module, etc...)
+	//  * @param   string          $action         Current action (if set). Generally create or edit or null
+	//  * @param   HookManager     $hookmanager    Hook manager propagated to allow calling another hook
+	//  * @return  int                             Return integer < 0 on error, 0 on success, 1 to replace standard code
+	//  */
+    // public function addMoreActionsButtons($parameters, &$object, &$action, $hookmanager) {
+    //     // global $user;
 
-        // print_r($parameters); print_r($object); echo "action: " . $action;
+    //     // print_r($parameters); print_r($object); echo "action: " . $action;
 
-        // dol_syslog(get_class($this).'::executeHooks action='.$action);
+    //     // dol_syslog(get_class($this).'::executeHooks action='.$action);
 
-        if ($user->hasRight('stockmanager', 'write')) {
-            print '<a class="butAction" href="'.$_SERVER["PHP_SELF"].'?id='.$object->id.'&action=testClem">testClem</a>';
-        } else {
-            print '<a class="butActionRefused classfortooltip" href="#" title="NotEnoughPermissions">testClem</a>';
-        }
+    //     if ($user->hasRight('stockmanager', 'write')) {
+    //         print '<a class="butAction" href="'.$_SERVER["PHP_SELF"].'?id='.$object->id.'&action=testClem">testClem</a>';
+    //     } else {
+    //         print '<a class="butActionRefused classfortooltip" href="#" title="NotEnoughPermissions">testClem</a>';
+    //     }
 
-        // $this->resprints = 'A text to show';
+    //     // $this->resprints = 'A text to show';
 
-        return 1;
-    }
+    //     return 1;
+    // }
 
 	// /**
 	//  * Overloading the doActions function : replacing the parent's function with the one below
