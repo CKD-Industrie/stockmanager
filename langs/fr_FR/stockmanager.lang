@@ -1,0 +1,83 @@
+# Copyright (C) 2024 Clément Jaunay <clj@ckd-industrie.com>
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+# Dolibarr language file - fr_FR - stockmanager
+
+CHARSET=UTF-8
+
+
+#
+# Generic
+#
+
+# Module label 'ModuleStockManagerName'
+ModuleStockManagerName = StockManager
+
+# Module description 'ModuleStockManagerDesc'
+ModuleStockManagerDesc = Gère le stock
+ModuleStockManagerDescLong = Gère le stock, attribution à un chantier, gestion des chantiers, etc.....
+
+
+
+#                   #
+#### BEGIN ADMIN ####
+#                   #
+
+# Global
+SetupAdminTitle = Configuration du module StockManager
+NoParam = Aucun paramètres pour le moment
+
+
+# Rights
+Rights01 = Lire les mouvements de StockManager
+Rights02 = Créer/modifier les mouvements de StockManager
+Rights03 = Supprimer les mouvements de StockManager
+
+
+# Tabs
+SetupTab = Configuration
+AboutTab = À propos
+
+# Setup page
+SetupTitlePage = Page de configuration de StockManager
+STOCKMANAGER_MYPARAM1 = My param 1
+STOCKMANAGER_MYPARAM1Tooltip = My param 1 tooltip
+STOCKMANAGER_MYPARAM2=My param 2
+STOCKMANAGER_MYPARAM2Tooltip=My param 2 tooltip
+
+
+# About page
+AboutTitlePage = Page d'informations de MultiInterventions
+AboutMessage = Ce module est développé et diffusé par Clément Jaunay pour CKD-Industrie, <a target="_blank" href="https://www.ckd-industrie.com">www.ckd-industrie.com</a>.
+
+
+#                 #
+#### END ADMIN ####
+#                 #
+
+
+
+#
+# Sample page
+#
+StockManagerArea = Home StockManager
+MyPageName = My page name
+
+
+#
+# Sample widget
+#
+MyWidget = My widget
+MyWidgetDescription = My widget description
